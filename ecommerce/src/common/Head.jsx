@@ -12,7 +12,6 @@ import {
 import { BsTelephoneFill } from 'react-icons/bs'
 import { FaEnvelope } from 'react-icons/fa'
 
-
 const Head = () => {
   return (
     <>

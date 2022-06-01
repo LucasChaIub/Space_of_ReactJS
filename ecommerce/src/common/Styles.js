@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+//----------------- Head ------------------
+
 export const HeadSection = styled.section`
   background-color: #0f3460;
   padding: 10px 0;
@@ -29,4 +31,21 @@ export const RightRowRText = styled.div`
 
 export const HeadIcon = styled.i`
   margin-right: 10px;
+`
+
+//----------------- Navbar ------------------
+
+export const NavbarHeader = styled.header`
+`
+
+export const CategoriesDFlex = styled.div`
+`
+
+export const NavLink = styled.div`
+`
+
+export const Nav = styled.ul`
+`
+
+export const NavList = styled.li`
 `
