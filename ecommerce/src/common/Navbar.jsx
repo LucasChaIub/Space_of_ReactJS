@@ -1,49 +1,51 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from "react-router-dom"
- 
-import { 
-  ContainerDFlex 
-} from './Styles'
 
 import { FiChevronDown } from 'react-icons/fi'
 import { BiBorderAll } from 'react-icons/bi'
+import { FaTimes, FaBars } from 'react-icons/fa'
 
 const Navbar = () => {
+  const [MobileMenu, setMobileMenu] = useState(false)
   return (
     <>
-      <NavbarHeader>
-        <ContainerDFlex>
-          <CategoriesDFlex>
+      <header className='header'>
+        <div className='container d_flex'>
+          <div className='categories d_flex'>
             <span><BiBorderAll /></span>
             <h4>
-              Categories<FiChevronDown />
+              Categories <FiChevronDown />
             </h4>
-          </CategoriesDFlex>
+          </div>
 
-          <NavLink>
-            <Nav>
-              <NavList>
+          <div className='navlink'>
+            <ul className={MobileMenu ? "nav-links-MobileMenu" : "link f_flex capitalize"} onClick={() => setMobileMenu(false)}>
+              <li>
                 <Link to='/'>Home</Link>
-              </NavList>
-              <NavList>
+              </li>
+              <li>
                 <Link to='/pages'>Pages</Link>
-              </NavList>
-              <NavList>
+              </li>
+              <li>
                 <Link to='/user'>User Account</Link>
-              </NavList>
-              <NavList>
+              </li>
+              <li>
                 <Link to='/vendor'>Vendor Account</Link>
-              </NavList>
-              <NavList>
+              </li>
+              <li>
                 <Link to='/track'>Track My Order</Link>
-              </NavList>
-              <NavList>
+              </li>
+              <li>
                 <Link to='/contact'>Contact</Link>
-              </NavList>
-            </Nav>
-          </NavLink>
-        </ContainerDFlex>
-      </NavbarHeader>
+              </li>
+            </ul>
+
+            <button className='toggle' onClick={() => setMobileMenu(!MobileMenu)}>
+              {MobileMenu ? <FaTimes /> : <FaBars />}
+            </button>
+          </div>
+        </div>
+      </header>
     </>
   )
 }
