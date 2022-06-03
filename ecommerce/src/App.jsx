@@ -12,10 +12,18 @@ import Header from './common/Header'
 function App() {
   return (
     <>
-      <MyRouter>
+      <Header />
+    </>
+  )
+}
+
+export default App
+
+
+{/* <MyRouter>
         <Header />      
         <Routes>
-          <Route path='/'>
+          <Route path='/' exact>
             <Pages productItems={productItems} addToCart={addToCart} shopItems={shopItems} /> 
           </Route>
 
@@ -23,10 +31,5 @@ function App() {
             <Cart CartItem={CartItem} addToCart={addToCart} decreaseQty={decreaseQty} />
           </Route>
         </Routes>
-        {/* <Footer /> */}
-      </MyRouter>
-    </>
-  )
-}
-
-export default App
+        <Footer />
+      </MyRouter> */}

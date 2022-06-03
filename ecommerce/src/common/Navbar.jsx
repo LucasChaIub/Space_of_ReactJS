@@ -14,34 +14,34 @@ const Navbar = () => {
           <div className='categories d_flex'>
             <span><BiBorderAll /></span>
             <h4>
-              Categories <FiChevronDown />
+              Categories<i><FiChevronDown /></i>
             </h4>
           </div>
 
           <div className='navlink'>
             <ul className={MobileMenu ? "nav-links-MobileMenu" : "link f_flex capitalize"} onClick={() => setMobileMenu(false)}>
               <li>
-                <Link to='/'>Home</Link>
+                <Link to="/">Home</Link>
               </li>
               <li>
-                <Link to='/pages'>Pages</Link>
+                <Link to="/pages">Pages</Link>
               </li>
               <li>
-                <Link to='/user'>User Account</Link>
+                <Link to="/user">User Account</Link>
               </li>
               <li>
-                <Link to='/vendor'>Vendor Account</Link>
+                <Link to="/vendor">Vendor Account</Link>
               </li>
               <li>
-                <Link to='/track'>Track My Order</Link>
+                <Link to="/track">Track My Order</Link>
               </li>
               <li>
-                <Link to='/contact'>Contact</Link>
+                <Link to="/contact">Contact</Link>
               </li>
             </ul>
 
             <button className='toggle' onClick={() => setMobileMenu(!MobileMenu)}>
-              {MobileMenu ? <FaTimes /> : <FaBars />}
+              {MobileMenu ? <i><FaTimes /></i> : <i><FaBars /></i>}
             </button>
           </div>
         </div>
