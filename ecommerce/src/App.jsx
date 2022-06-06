@@ -8,11 +8,17 @@ import {
 } from 'react-router-dom';
 
 import Header from './common/Header'
+import Pages from './pages/Pages'
 
 function App() {
   return (
     <>
-      <Header />
+      <MyRouter>
+        <Header />      
+        <Routes>
+          <Route path='/' element={<Pages />} />
+        </Routes>
+      </MyRouter>
     </>
   )
 }
@@ -20,16 +26,3 @@ function App() {
 export default App
 
 
-{/* <MyRouter>
-        <Header />      
-        <Routes>
-          <Route path='/' exact>
-            <Pages productItems={productItems} addToCart={addToCart} shopItems={shopItems} /> 
-          </Route>
-
-          <Route path='/cart'>
-            <Cart CartItem={CartItem} addToCart={addToCart} decreaseQty={decreaseQty} />
-          </Route>
-        </Routes>
-        <Footer />
-      </MyRouter> */}
