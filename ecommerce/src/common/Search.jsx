@@ -19,7 +19,7 @@ const Search = () => {
           </div>
 
           <div className="search-box f_flex">
-            <i className="icon_circle"><FaSearch /></i>
+            <i><FaSearch /></i>
             <input type="text" placeholder="Search and hit enter..." />
             <span>All Category</span>
           </div>
