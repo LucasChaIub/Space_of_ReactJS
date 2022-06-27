@@ -9,6 +9,7 @@ import {
 
 import Header from './common/Header'
 import Pages from './pages/Pages'
+import Cart from './common/cart/Cart';
 
 import Data from './components/flashDeals/Data'
 
@@ -18,12 +19,22 @@ function App() {
 
   const [cartItem, setCartItem] = useState([])
 
+  const addToCart = (product) => {
+    const productExit = cartItem.find((item) => item.id === product.id)
+  
+    if(productExit) {
+      setCardItem(cartItem.map((item) => 
+      (item.id === product.id? {...productExit, qty:productExit.qty+1} : item)))
+    }
+  }
+
   return (
     <>
       <MyRouter>
-        <Header />      
+        <Header cartItem={cartItem} />      
         <Routes>
-          <Route path='/' element={<Pages productItems={productItems} />} />
+          <Route path='/' element={<Pages productItems={productItems} addToCart={addToCart} />} />
+          <Route path='/cart' element={<Cart cartItem={cartItem} addToCart={addToCart} />} />
         </Routes>
       </MyRouter>
     </>
