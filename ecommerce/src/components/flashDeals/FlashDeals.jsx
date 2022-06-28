@@ -3,7 +3,7 @@ import React from 'react'
 import { FaBolt } from 'react-icons/fa'
 import FlashCard from './FlashCard'
 
-const FlashDeals = ({ productItems }) => {
+const FlashDeals = ({ productItems, addToCart }) => {
   return (
     <>
       <section className="flash background">
@@ -12,7 +12,7 @@ const FlashDeals = ({ productItems }) => {
             <i><FaBolt/></i>
             <h1>Flash Deals</h1>
           </div>
-          <FlashCard productItems={productItems} />
+          <FlashCard productItems={productItems} addToCart={addToCart} />
         </div>
       </section>
     </>

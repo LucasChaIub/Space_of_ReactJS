@@ -24,7 +24,9 @@ function App() {
   
     if(productExit) {
       setCardItem(cartItem.map((item) => 
-      (item.id === product.id? {...productExit, qty:productExit.qty+1} : item)))
+      (item.id === product.id? {...productExit, qty:productExit.qty + 1} : item)))
+    } else {
+      setCartItem([...cartItem, { ...product, qty: 1 }])
     }
   }
 

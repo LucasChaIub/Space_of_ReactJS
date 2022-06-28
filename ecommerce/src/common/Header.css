@@ -14,7 +14,6 @@
   font-size: 13px;
 }
 /*----------- head -----------*/
-
 /*----------- search -----------*/
 .search {
   padding: 20px 0;
@@ -31,7 +30,7 @@
 
 .search-box {
   width: 80%;
-  border: 2px solid rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(0, 0, 0, 0.1); 
 }
 
 .search-box i {
@@ -66,7 +65,7 @@
 .search .cart span {
   position: absolute;
   top: -10px;
-  right: 0;
+  right: -10px;
   width: 20px;
   height: 20px;
   border-radius: 50%;
