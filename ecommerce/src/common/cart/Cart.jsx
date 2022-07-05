@@ -5,16 +5,16 @@ import { FaPlus, FaMinus } from 'react-icons/fa';
 import { CgClose } from 'react-icons/cg';
 
 
-const Cart = ({ cartItem, addToCart, decreaseQty }) => {
-  const totalPrice = cartItem.reduce((price, item) => price + item.qty * item.price, 0)
+const Cart = ({ CartItem, addToCart, decreaseQty }) => {
+  const totalPrice = CartItem.reduce((price, item) => price + item.qty * item.price, 0)
   return (
     <>
       <section className="cart-items">
         <div className="container d_flex">
           <div className="cart-details">
-            {cartItem.length === 0 && <h1 className="no-items product">No Items are add in Cart</h1>}
+            {CartItem.length === 0 && <h1 className="no-items product">No Items are add in Cart</h1>}
 
-            {cartItem.map((item) => {
+            {CartItem.map((item) => {
               const productQty = item.price * item.qty
               return (
                 <div className="cart-list product d_flex">

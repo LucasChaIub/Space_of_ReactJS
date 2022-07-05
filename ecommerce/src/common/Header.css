@@ -30,7 +30,8 @@
 
 .search-box {
   width: 80%;
-  border: 2px solid rgba(0, 0, 0, 0.1); 
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50px; 
 }
 
 .search-box i {
@@ -53,9 +54,12 @@
 
 .search-box span {
   width: 20%;
+  text-align: center;
+  align-items: center;
+  font-size: 17px;
   opacity: 0.5;
   border-left: 2px solid rgba(0, 0, 0, 0.1);
-  padding: 10px; 
+  padding: 15px;
 }
 
 .cart {
