@@ -1,4 +1,6 @@
 import React from 'react'
+import TopCart from './TopCart'
+import './Style.css'
 
 import { FaBorderAll, FaCaretRight  } from 'react-icons/fa'
 
@@ -17,6 +19,7 @@ const TopCate = () => {
               <i><FaCaretRight /> </i>
             </div>
           </div>
+          <TopCart />
         </div>
       </section>
     </>

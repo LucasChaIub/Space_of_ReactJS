@@ -11,7 +11,7 @@ import Header from './common/Header'
 import Pages from './pages/Pages'
 import Cart from './common/cart/Cart';
 
-import Data from './components/flashDeals/Data'
+import Data from './components/Data'
 
 function App() {
   // passo 1: fetch data from database
