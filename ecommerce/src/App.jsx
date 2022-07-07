@@ -12,10 +12,12 @@ import Pages from './pages/Pages'
 import Cart from './common/cart/Cart';
 
 import Data from './components/Data'
+import Sdata from './components/shops/Sdata';
 
 function App() {
   // passo 1: fetch data from database
   const { productItems } = Data
+  const { shopItems } = Sdata
 
   const [CartItem, setCartItem] = useState([])
 
@@ -44,7 +46,7 @@ function App() {
       <MyRouter>
         <Header CartItem={CartItem} />      
         <Routes>
-          <Route path='/' element={<Pages productItems={productItems} addToCart={addToCart} />} />
+          <Route path='/' element={<Pages productItems={productItems} addToCart={addToCart} shopItems={shopItems} />} />
           <Route path='/cart' element={<Cart CartItem={CartItem} addToCart={addToCart} decreaseQty={decreaseQty}/>} />
         </Routes>
       </MyRouter>
