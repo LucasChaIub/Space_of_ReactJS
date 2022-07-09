@@ -7,9 +7,11 @@ import {
   Route
 } from 'react-router-dom';
 
-import Header from './common/Header'
 import Pages from './pages/Pages'
+
+import Header from './common/header/Header'
 import Cart from './common/cart/Cart';
+import Footer from './common/footer/Footer';
 
 import Data from './components/Data'
 import Sdata from './components/shops/Sdata';
@@ -49,6 +51,7 @@ function App() {
           <Route path='/' element={<Pages productItems={productItems} addToCart={addToCart} shopItems={shopItems} />} />
           <Route path='/cart' element={<Cart CartItem={CartItem} addToCart={addToCart} decreaseQty={decreaseQty}/>} />
         </Routes>
+        <Footer />
       </MyRouter>
     </>
   )
